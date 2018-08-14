@@ -1,28 +1,28 @@
 const uniqueCharacters = require("../lib/uniqueCharacters");
-describe("when word is dddeeefggghhh", () => {
+describe("when word has one unique character", () => {
   it("should return f", () => {
     const result = uniqueCharacters("dddeeefggghhh");
     expect(result).toEqual("f");
   });
 });
 
-describe("when word is terfg", () => {
+describe("has all unique characters", () => {
   it("should return t", () => {
     const result = uniqueCharacters("terfg");
     expect(result).toEqual("t");
   });
 });
 
-describe("when word is frof", () => {
+describe("has two unique characters", () => {
   it("should return r", () => {
     const result = uniqueCharacters("frof");
     expect(result).toEqual("r");
   });
 });
 
-describe("when word is ttttt", () => {
-  it("should return undefined", () => {
+describe("when string has no unique characters", () => {
+  it("should return 0", () => {
     const result = uniqueCharacters("ttttt");
-    expect(result).toEqual(false);
+    expect(result).toBeUndefined();
   });
 });
